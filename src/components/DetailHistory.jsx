@@ -2,9 +2,12 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import convertMoney from "../convertMoney";
 import useFetchToken from "../hooks/useFetchToken";
+import BASE_URL from "../hooks/baseURL";
 function DetailHistory() {
   const { id } = useParams();
-  const { data, loading } = useFetchToken(`/api/order/orderdetail/${id}`);
+  const { data, loading } = useFetchToken(
+    `${BASE_URL}/order/orderdetail/${id}`
+  );
   return (
     <div>
       <section className=" bg-slate-100 px-60 py-12">

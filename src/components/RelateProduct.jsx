@@ -1,13 +1,16 @@
 import React from "react";
 import useFetch from "../hooks/useFetch";
 import { Link } from "react-router-dom";
+import BASE_URL from "../hooks/baseURL";
 
 const RelateProduct = ({ category, id }) => {
   const formatter = new Intl.NumberFormat("vi-VN", {
     style: "decimal",
     maximumFractionDigits: 3,
   });
-  const { data, loading } = useFetch(`/api/product/category/${category}`);
+  const { data, loading } = useFetch(
+    `${BASE_URL}/product/category/${category}`
+  );
   const newData = data.filter((item) => item._id !== id);
   return (
     <div className="py-8">

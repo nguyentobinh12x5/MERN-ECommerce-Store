@@ -4,9 +4,12 @@ import convertMoney from "../convertMoney";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/UseSlice";
 import useFetchToken from "../hooks/useFetchToken";
+import BASE_URL from "../hooks/baseURL";
 const History = () => {
   const user = useSelector(selectUser);
-  const { data, loading } = useFetchToken(`/api/order/user/${user.email}`);
+  const { data, loading } = useFetchToken(
+    `${BASE_URL}/order/user/${user.email}`
+  );
   return (
     <div>
       <section className=" bg-slate-100 px-60 py-12">
@@ -15,8 +18,8 @@ const History = () => {
           <p className="text-xl text-slate-gray">History</p>
         </div>
       </section>
-      <div className="padding w-full">
-        <table className="divide-y divide-gray-200">
+      <div className="padding overflow-auto pt-20 pb-20">
+        <table className="w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr className="text-center">
               <th className="px-6 py-3 text-xs font-medium text-gray-500 uppercase">

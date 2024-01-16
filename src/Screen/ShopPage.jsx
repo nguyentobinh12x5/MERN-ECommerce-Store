@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
+import BASE_URL from "../hooks/baseURL";
 const ShopPage = () => {
-  const { data, loading, error } = useFetch("/api/product");
+  const { data, loading, error } = useFetch(`${BASE_URL}/product`);
   const [category, setCategory] = useState();
   const [displayDefault, setdisPlayDefault] = useState(true);
   const formatter = new Intl.NumberFormat("vi-VN", {

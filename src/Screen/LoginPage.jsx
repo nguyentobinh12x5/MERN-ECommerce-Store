@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../features/UseSlice";
 import axios from "axios";
+import BASE_URL from "../hooks/baseURL";
 const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -16,7 +17,7 @@ const Login = () => {
     };
     console.log(userLogin);
     try {
-      const response = await axios.post("/api/auth/login", userLogin);
+      const response = await axios.post(`${BASE_URL}/auth/login`, userLogin);
       const data = response.data;
       const token = data.token;
       localStorage.setItem("token", token);

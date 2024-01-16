@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import BASE_URL from "../hooks/baseURL";
 const SignUp = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -18,7 +19,7 @@ const SignUp = () => {
       address: addressRef.current.value,
     };
     try {
-      await axios.post("/api/auth/register", user);
+      await axios.post(`${BASE_URL}/auth/register`, user);
       navigate("/login");
     } catch (err) {
       console.log(err);

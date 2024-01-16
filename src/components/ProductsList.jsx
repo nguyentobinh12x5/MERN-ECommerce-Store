@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import convertMoney from "../convertMoney";
+import BASE_URL from "../hooks/baseURL";
 const ProductsList = () => {
-  const { data, loading, error } = useFetch("/api/product");
+  const { data, loading, error } = useFetch(`${BASE_URL}/product`);
   return (
     <section className="max-container" id="productlist">
       <div className="pb-4">

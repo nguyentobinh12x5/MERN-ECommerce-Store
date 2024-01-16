@@ -5,12 +5,13 @@ import useFetch from "../hooks/useFetch";
 import RelateProduct from "../components/RelateProduct";
 import { useDispatch } from "react-redux";
 import convertMoney from "../convertMoney";
+import BASE_URL from "../hooks/baseURL";
 const DetailPage = () => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
   const params = useParams();
   const productId = params.productId;
-  const { data, loading, error } = useFetch(`/api/product/${productId}`);
+  const { data, loading, error } = useFetch(`${BASE_URL}/product/${productId}`);
   const handleIncrease = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
   };

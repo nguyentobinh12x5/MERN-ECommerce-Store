@@ -5,6 +5,7 @@ import { clearCart, selectAmount, selectCart } from "../features/CartSlice";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { selectUser } from "../features/UseSlice";
+import BASE_URL from "../hooks/baseURL";
 const CheckoutPage = () => {
   const dispatch = useDispatch();
   const cart = useSelector(selectCart);
@@ -35,12 +36,12 @@ const CheckoutPage = () => {
       };
       const token = localStorage.getItem("token");
 
-      await axios.post("/api/order/create", newOrder, {
+      await axios.post(`${BASE_URL}/order/create`, newOrder, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
-      await axios.post("/api/order/getbill", newOrder, {
+      await axios.post(`${BASE_URL}/order/getbill`, newOrder, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
