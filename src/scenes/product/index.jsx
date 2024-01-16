@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import axios from "axios";
 import { useState } from "react";
+import BASE_URL from "../../hooks/baseURL";
 const Product = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -15,14 +16,14 @@ const Product = () => {
   const [filterModel, setFilterModel] = useState({
     items: [{ columnField: "name", operatorValue: "contains", value: "" }],
   });
-  const { data, loading, reFetch } = useFetch("/product");
+  const { data, loading, reFetch } = useFetch(`${BASE_URL}/product`);
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm(
       "Are you sure to delete this product?"
     );
     if (confirmDelete) {
       try {
-        await axios.delete(`/product/${id}`, {
+        await axios.delete(`${BASE_URL}/product/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -48,7 +49,7 @@ const Product = () => {
               Delete
             </div>
             <Link
-              to={`/product/edit/${params.row._id}`}
+              to={`${BASE_URL}/product/edit/${params.row._id}`}
               style={{ textDecoration: "none" }}
             >
               <div className="viewButton">Edit</div>

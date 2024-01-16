@@ -8,16 +8,17 @@ import Header from "../../components/Header";
 import useFetchToken from "../../hooks/useFetchToken";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import BASE_URL from "../../hooks/baseURL";
 const Customer = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const { data, loading, reFetch } = useFetchToken("/user");
+  const { data, loading, reFetch } = useFetchToken(`${BASE_URL}/user`);
   const token = localStorage.getItem("token");
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm("Are you sure to delete this user?");
     if (confirmDelete) {
       try {
-        await axios.delete(`user/${id}`, {
+        await axios.delete(`${BASE_URL}user/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -97,7 +98,7 @@ const Customer = () => {
               Delete
             </div>
             <Link
-              to={`/user/edit/${params.row._id}`}
+              to={`${BASE_URL}/user/edit/${params.row._id}`}
               style={{ textDecoration: "none" }}
             >
               <div className="viewButton">Edit</div>

@@ -14,6 +14,7 @@ import Header from "../../components/Header";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from "../../hooks/baseURL";
 const category = [
   {
     title: "Iphone",
@@ -65,7 +66,7 @@ const NewProduct = () => {
         img4: list[3],
         category: selectCategory,
       };
-      await axios.post("/product/newproduct", newProduct, {
+      await axios.post(`${BASE_URL}/product/newproduct`, newProduct, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

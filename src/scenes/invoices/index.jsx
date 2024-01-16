@@ -5,16 +5,17 @@ import Header from "../../components/Header";
 import useFetchToken from "../../hooks/useFetchToken";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import BASE_URL from "../../hooks/baseURL";
 const Invoices = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const { data, loading, reFetch } = useFetchToken("/order/");
+  const { data, loading, reFetch } = useFetchToken(`${BASE_URL}/order/`);
   const token = localStorage.getItem("token");
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm("Are you sure to delete this order?");
     if (confirmDelete) {
       try {
-        await axios.delete(`/order/${id}`, {
+        await axios.delete(`${BASE_URL}/order/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -15,14 +15,15 @@ import {
 } from "../../convert";
 import { useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import BASE_URL from "../../hooks/baseURL";
 
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
-  const { data: order } = useFetchToken("/order");
-  const { data: user } = useFetchToken("/user");
-  const { data: product } = useFetch("/product");
+  const { data: order } = useFetchToken(`${BASE_URL}/order`);
+  const { data: user } = useFetchToken(`${BASE_URL}/user`);
+  const { data: product } = useFetch(`${BASE_URL}/product`);
   const totalRevenue = calculateTotalPrice(order);
   return (
     <Box m="20px">

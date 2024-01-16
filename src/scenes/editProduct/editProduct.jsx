@@ -16,6 +16,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import BASE_URL from "../../hooks/baseURL";
 const category = [
   {
     title: "Iphone",
@@ -45,7 +46,7 @@ const EditProduct = () => {
   const handleCategoryChange = (event) => {
     setSelectCategory(event.target.value);
   };
-  const { data, loading } = useFetch(`/product/${params.id}`);
+  const { data, loading } = useFetch(`${BASE_URL}/product/${params.id}`);
   const initialValues = data || {
     name: "",
     price: "",

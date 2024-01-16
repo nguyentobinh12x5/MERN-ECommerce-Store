@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TextField, Button, Container, Alert } from "@mui/material";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import BASE_URL from "../../hooks/baseURL";
 const Login = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [userLogin, setUserLogin] = useState();
@@ -16,7 +17,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/auth/login", userLogin);
+      const response = await axios.post(`${BASE_URL}/auth/login`, userLogin);
       const data = response.data;
       const token = data.token;
       localStorage.setItem("token", token);
