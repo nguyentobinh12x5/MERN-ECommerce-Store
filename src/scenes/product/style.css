@@ -1,0 +1,29 @@
+.cellAction {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.viewButton {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: white;
+  border: 1px dotted rgba(255, 255, 255, 0.596);
+  cursor: pointer;
+}
+.deleteButton {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: crimson;
+  background-color: white;
+  cursor: pointer;
+}
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
