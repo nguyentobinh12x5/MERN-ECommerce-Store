@@ -1,11 +1,9 @@
 import React from "react";
-import {
-  applewatch,
-  ipad,
-  macbookair,
-  airpods,
-  iphone,
-} from "../assets/images/index";
+import airpods from "../assets/images/airpods.png";
+import applewatch from "../assets/images/applewatch.png";
+import ipad from "../assets/images/ipad.webp";
+import iphone from "../assets/images/iphone.png";
+import macbookair from "../assets/images/macbook-air.png";
 import { Link } from "react-router-dom";
 const Content = () => {
   return (
