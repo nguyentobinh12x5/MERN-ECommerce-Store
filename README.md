@@ -1,8 +1,28 @@
-# React + Vite
+# React Ecommerce Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Đây là ass3 tạo ứng dụng web bán hàng thương mại điện tử trong khóa học FullStack Developer của Funix.
 
-Currently, two official plugins are available:
+Ứng dụng bao gồm 2 phần và được lưu trong 3 branch của project:
++FrondEnd: Client and Admin
++BackEnd: Server
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Dưới đây là thông tin chi tiết về client frontend
+Link Website:https://client-commerce.vercel.app/
+
+Giới thiệu:
+Client FrontEnd gồm có các trang như Trang chủ, cửa hàng, Giỏ hàng, Đăng nhập & Đăng ký, Thông tin đơn đặt hàng. Cùng với đó là những chức năng cơ bản như: thêm sản phẩm giỏ hàng, thanh toán và xem lịch sử giao dịch.
+
+Dưới đây là hình ảnh về ứng dụng web:
+![Alt text](image.png)
+![Alt text](image-1.png)
+![Alt text](image-2.png)
+=> Các gói package được sử dụng
+
+- Vites
+- Axios
+- React-Router-Dom
+- React-Redux
+- Flowbite-React
+
+* Tác giả: Nguyễn Tố Bình
+* Contact: Linkedle
