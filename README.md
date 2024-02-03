@@ -5,7 +5,7 @@ This is ass3 creating an e-commerce sales web application in Funix's FullStack D
 The application consists of 2 parts and is saved in 3 branches of the project:
 +FrondEnd: Client and Admin
 +BackEnd: Server
-
+I already created fronten-back in branch github, so that you can check and try them
 Below is detailed information about the client frontend
 Website Link:https://client-commerce.vercel.app/
 
