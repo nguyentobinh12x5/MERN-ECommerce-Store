@@ -2,9 +2,9 @@
 
 Link Website:https://admin-commerce-three.vercel.app
 
-Giới thiệu:
-Admin Dashboard hiển thị các thông tin về khách hàng, sản phẩm, đơn hàng. Đồng thời hiển thị trực quan báo cáo thông số từ cơ sở dữ liệu.
-Dưới đây là hình ảnh về chức năng trong ứng dụng
+Introduce:
+Admin Dashboard displays information about customers, products, and orders. At the same time, visually display parameter reports from the database.
+Below is an image of the functionality in the application
 +Product Manage Include Add, Edit, Delete
 ![Alt text](image-1.png)
 +Dashboard: total product, order, customer, transaction
@@ -12,7 +12,7 @@ Dưới đây là hình ảnh về chức năng trong ứng dụng
 +Customer Manage Include Add, Edit, Delete
 +Transaction Manage Include Add, Edit, Delete
 
-=> Các gói package được sử dụng
+=> pacckage
 
 - Create react app
 - Axios
@@ -20,5 +20,5 @@ Dưới đây là hình ảnh về chức năng trong ứng dụng
 - React-Router-Dom
 - Mui Material
 
-* Tác giả: Nguyễn Tố Bình
+* Author: Nguyễn Tố Bình
 * Contact: Linkedle
