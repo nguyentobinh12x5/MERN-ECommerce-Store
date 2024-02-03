@@ -1,22 +1,22 @@
 # React Ecommerce Application
 
-Đây là ass3 tạo ứng dụng web bán hàng thương mại điện tử trong khóa học FullStack Developer của Funix.
+This is ass3 creating an e-commerce sales web application in Funix's FullStack Developer course.
 
-Ứng dụng bao gồm 2 phần và được lưu trong 3 branch của project:
+The application consists of 2 parts and is saved in 3 branches of the project:
 +FrondEnd: Client and Admin
 +BackEnd: Server
 
-Dưới đây là thông tin chi tiết về client frontend
-Link Website:https://client-commerce.vercel.app/
+Below is detailed information about the client frontend
+Website Link:https://client-commerce.vercel.app/
 
-Giới thiệu:
-Client FrontEnd gồm có các trang như Trang chủ, cửa hàng, Giỏ hàng, Đăng nhập & Đăng ký, Thông tin đơn đặt hàng. Cùng với đó là những chức năng cơ bản như: thêm sản phẩm giỏ hàng, thanh toán và xem lịch sử giao dịch.
+Introduce:
+Client FrontEnd includes pages such as Home, Shop, Shopping Cart, Login & Register, Order Information. Along with that are basic functions such as: adding products to cart, making payments and viewing transaction history.
 
-Dưới đây là hình ảnh về ứng dụng web:
+Photo of web application:
 ![Alt text](image.png)
 ![Alt text](image-1.png)
 ![Alt text](image-2.png)
-=> Các gói package được sử dụng
+=> package use in this project
 
 - Vites
 - Axios
@@ -24,5 +24,5 @@ Dưới đây là hình ảnh về ứng dụng web:
 - React-Redux
 - Flowbite-React
 
-* Tác giả: Nguyễn Tố Bình
+* Author: Nguyen To Binh
 * Contact: Linkedle
